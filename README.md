@@ -14,44 +14,47 @@ The repository includes:
 *New model considering the shape characteristics of NMC particles is coming, stay tune.*
 
 ## Installation
-From the [Releases page](https://github.com/hijizhou/LIBNet/releases) page:
-1. Download `mask_rcnn_particles.h5` from the section `Pretrained model v0.1`. Save it in the `model` directory of the repo.
-2. Download `example_data.zip`. Unzip it such that it's in the path `data/example/`.
-
-## Apply color splash using the provided weights
-Apply splash effect on an image:
-
+1. Clone this repository via `git clone https://github.com/hijizhou/LIBNet.git`
+2. Install dependencies and current repo
 ```bash
-python3 balloon.py splash --weights=/path/to/mask_rcnn/mask_rcnn_balloon.h5 --image=<file name or URL>
+    pip install -r requirements.txt
 ```
-
-Apply splash effect on a video. Requires OpenCV 3.2+:
-
+3. Run setup from the repository root directory
 ```bash
-python3 balloon.py splash --weights=/path/to/mask_rcnn/mask_rcnn_balloon.h5 --video=<file name or URL>
+    python3 setup.py install
 ```
-
+4. From the [Releases](https://github.com/hijizhou/LIBNet/releases) page, download `mask_rcnn_particles.h5` from the section `Pretrained model v0.1`. Save it in the `model` directory of the repo.
+5. (Optional) Download `example_data.zip`. Unzip it such that it's in the path `data/example/`.
 
 ## Run Jupyter notebooks
-Open the `inspect_balloon_data.ipynb` or `inspect_balloon_model.ipynb` Jupter notebooks. You can use these notebooks to explore the dataset and run through the detection pipelie step by step.
+### Inspection of training data
+Open the `inspect_training_data_particle.ipynb`. You can use these notebooks to explore the dataset and run through the detection pipeline step by step.
 
-## Train the Balloon model
+### Inspection of pre-trained model
+Open the `inspect_pretrained_model_particle.ipynb`.  This notebook goes in depth into the steps performed to detect and segment particles. It provides visualizations of every step of the pipeline.
 
-Train a new model starting from pre-trained COCO weights
+### Training on your own dataset
+See examples in `inspect_pretrained_model_particle.ipynb`. 
+
+## Citation
+Use this bibtex to cite this repository:
 ```
-python3 balloon.py train --dataset=/path/to/balloon/dataset --weights=coco
+@misc{jiang_lib_segmentation2020,
+  title={Machine-Learning-Revealed Statistics of the Particle-Carbon/Binder Detachment in Li-Ion Battery Cathodes},
+  author={Z. Jiang, J. Li, Y.Yang, L. Mu, C. Wei, X. Yu, P. Pianetta, K. Zhao, P. Cloetens, F. Lin and Y. Liu},
+  year={2020},
+}
 ```
 
-Resume training a model that you had trained earlier
-```
-python3 balloon.py train --dataset=/path/to/balloon/dataset --weights=last
-```
+## Contributing
+Contributions to this repository are always welcome. Examples of things you can contribute:
+* Accuracy Improvements. A more accurate model based on the shape characteristic is coming.
+* Training on your own data and release the trained models.
+* Visualizations and examples.
 
-Train a new model starting from ImageNet weights
-```
-python3 balloon.py train --dataset=/path/to/balloon/dataset --weights=imagenet
-```
+## Requirements
+Python 3.4+, TensorFlow 1.3, Keras 2.0.8 and other common packages listed in `requirements.txt`.
 
-The code in `balloon.py` is set to train for 3K steps (30 epochs of 100 steps each), and using a batch size of 2. 
-Update the schedule to fit your needs.
+
+
 
