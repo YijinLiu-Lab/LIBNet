@@ -4,7 +4,7 @@ This is an implementation of [Mask R-CNN](https://arxiv.org/abs/1703.06870) on P
 
 The model generates bounding boxes and segmentation masks for each instance of an object in the image. It's based on Feature Pyramid Network (FPN) and a ResNet101 backbone.
 
-![Instance Segmentation Sample](assets/seg_pipeline.png | width=200)
+<img src="assets/seg_pipeline.png" alt="Instance Segmentation Sample" width="600" height="480">
 
 The repository includes:
 * Pre-trained weights
@@ -34,7 +34,7 @@ Open the `inspect_training_data_particle.ipynb`. You can use these notebooks to 
 Open the `inspect_pretrained_model_particle.ipynb`.  This notebook goes in depth into the steps performed to detect and segment particles. It provides visualizations of every step of the pipeline.
 
 ##### Performance evaluation
-![Instance Segmentation Sample](assets/seg_pipeline.png)
+<img src="assets/performance_mask_rcnn.png" alt="Performance Evaluation" width="600" height="480">
 
 
 ### Training on your own dataset
