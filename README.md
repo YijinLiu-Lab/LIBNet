@@ -4,7 +4,7 @@ This is an implementation of [Mask R-CNN](https://arxiv.org/abs/1703.06870) on P
 
 The model generates bounding boxes and segmentation masks for each instance of an object in the image. It's based on Feature Pyramid Network (FPN) and a ResNet101 backbone.
 
-![Instance Segmentation Sample](assets/seg_pipeline.png)
+![Instance Segmentation Sample](assets/seg_pipeline.png | width=200)
 
 The repository includes:
 * Pre-trained weights
@@ -33,6 +33,10 @@ Open the `inspect_training_data_particle.ipynb`. You can use these notebooks to 
 ### Inspection of pre-trained model
 Open the `inspect_pretrained_model_particle.ipynb`.  This notebook goes in depth into the steps performed to detect and segment particles. It provides visualizations of every step of the pipeline.
 
+##### Performance evaluation
+![Instance Segmentation Sample](assets/seg_pipeline.png)
+
+
 ### Training on your own dataset
 See examples in `inspect_pretrained_model_particle.ipynb`. 
 
@@ -42,7 +46,7 @@ Use this bibtex to cite this repository:
 @misc{jiang_lib_segmentation2020,
   title={Machine-Learning-Revealed Statistics of the Particle-Carbon/Binder Detachment in Li-Ion Battery Cathodes},
   author={Z. Jiang, J. Li, Y.Yang, L. Mu, C. Wei, X. Yu, P. Pianetta, K. Zhao, P. Cloetens, F. Lin and Y. Liu},
-  year={2020},
+  year={2020},s
 }
 ```
 
@@ -53,7 +57,7 @@ Contributions to this repository are always welcome. Examples of things you can 
 * Visualizations and examples.
 
 ## Requirements
-Python 3.4+, TensorFlow 1.3, Keras 2.0.8 and other common packages listed in `requirements.txt`.
+Python 3.6, TensorFlow 1.3, Keras 2.0.8 and other common packages listed in `requirements.txt`.
 
 
 
