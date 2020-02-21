@@ -29,7 +29,7 @@ The repository includes:
 ## Run Jupyter notebooks
 ### Quick demo
 Open the `quick_demo_particle.ipynb`. You can use the `example data` to see the detection and segmentation results by the pre-trained model.
-<img src="assets/demo_detection.png" alt="Example detection" width="600" height="480">
+<img src="assets/demo_detection.png" alt="Example detection" width="1200" height="280">
 
 ### Inspection of training data
 Open the `inspect_training_data_particle.ipynb`. You can use these notebooks to explore the dataset and run through the detection pipeline step by step.
@@ -38,7 +38,7 @@ Open the `inspect_training_data_particle.ipynb`. You can use these notebooks to 
 Open the `inspect_pretrained_model_particle.ipynb`.  This notebook goes in depth into the steps performed to detect and segment particles. It provides visualizations of every step of the pipeline.
 
 ##### Performance evaluation
-<img src="assets/performance_mask_rcnn.png" alt="Performance Evaluation" width="600" height="480">
+<img src="assets/performance_mask_rcnn.png" alt="Performance Evaluation" width="500" height="400">
 
 
 ## Training on your own dataset
