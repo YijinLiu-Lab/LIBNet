@@ -1,0 +1,8 @@
+
+model/mask_rcnn_particle.h5
+
+data/
+
+mrcnn/__pycache__/
+
+samples/__pycache__/
