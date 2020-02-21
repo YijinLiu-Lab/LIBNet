@@ -91,7 +91,7 @@ class ParticlesDataset(utils.Dataset):
         self.add_class("particles", 1, "particles")
 
         # Train or validation dataset?
-        assert subset in ["train", "val"]
+        assert subset in ["train", "val", "example"]
         dataset_dir = os.path.join(dataset_dir, subset)
 
         # Load annotations
