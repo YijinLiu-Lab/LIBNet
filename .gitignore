@@ -6,3 +6,7 @@ data/
 mrcnn/__pycache__/
 
 samples/__pycache__/
+
+.idea/
+
+.ipynb_checkpoints/
