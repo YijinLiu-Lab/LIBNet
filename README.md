@@ -1,6 +1,11 @@
 # NMC Particle Detection and Segmentation in X-ray Nano-tomography Images of Lithium-Ion Battery Cathodes
 
-This is an implementation of [Mask R-CNN](https://arxiv.org/abs/1703.06870) on Python 3, Keras, and TensorFlow, for the instance segmentation of Ni0.33Mn0.33Co0.33 (NMC) particles in Lithium-ion battery cathodes. 
+This is an implementation of [Mask R-CNN](https://arxiv.org/abs/1703.06870) on Python 3, Keras, and TensorFlow, for the instance segmentation of Ni0.33Mn0.33Co0.33 (NMC) particles in Lithium-ion battery cathodes.
+
+```ruby
+The microstructure of a composite electrode determines how individual battery particles are charged and discharged in a lithium-ion battery. It is a frontier challenge to experimentally visualize and, subsequently, to understand the electrochemical consequences of battery particles’ evolving (de)attachment with the conductive matrix. Herein, we tackle this issue with a unique combination of multiscale experimental approaches, machine-learning-assisted statistical analysis, and experiment-informed mathematical modeling. Our results suggest that the degree of particle detachment is positively correlated with the charging rate and that smaller particles exhibit a higher degree of uncertainty in their detachment from the carbon/binder matrix. We further explore the feasibility and limitation of utilizing the reconstructed electron density as a proxy for the state-of-charge. Our findings highlight the importance of precisely quantifying the evolving nature of the battery electrode’s microstructure with statistical confidence, which is a key to maximize the utility of active particles towards higher battery capacity.
+```
+
 
 The model generates bounding boxes and segmentation masks for each instance of an object in the image. It's based on Feature Pyramid Network (FPN) and a ResNet101 backbone.
 
@@ -63,10 +68,12 @@ python3 particles.py train --dataset=/path/to/your/dataset --weights=coco
 ## Citation
 Use this bibtex to cite this repository:
 ```
-@misc{jiang_lib_segmentation2020,
+@article{jiang_lib_segmentation2020,
   title={Machine-Learning-Revealed Statistics of the Particle-Carbon/Binder Detachment in Li-Ion Battery Cathodes},
   author={Z. Jiang, J. Li, Y.Yang, L. Mu, C. Wei, X. Yu, P. Pianetta, K. Zhao, P. Cloetens, F. Lin and Y. Liu},
-  year={2020},s
+  journal={Nature Communications},
+  year={2020},
+  publisher={Nature Publishing Group}
 }
 ```
 
@@ -78,7 +85,3 @@ Contributions to this repository are always welcome. Examples of things you can 
 
 ## Requirements
 Python 3.6, TensorFlow 1.3, Keras 2.0.8 and other common packages listed in `requirements.txt`.
-
-
-
-
